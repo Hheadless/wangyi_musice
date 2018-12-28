@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     tabChange(ind) {
-      console.log(ind);
       this.style = `left:${this.baif * (ind + 1 + ind)}%`;
     }
   },

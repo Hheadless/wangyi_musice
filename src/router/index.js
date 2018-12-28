@@ -9,7 +9,7 @@ import Account from '@/containers/master/account'
 import Friend from '@/containers/master/friend'
 import Video from '@/containers/master/video'
 import Recommend from '@/containers/master/recommend'
-import Station from '@/containers/master/Station'
+import Station from '@/containers/master/station'
 
 import StoreView from '@/components/store'
 

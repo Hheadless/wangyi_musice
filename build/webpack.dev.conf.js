@@ -42,6 +42,26 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      app.get('/recom', (req, res) => {
+        require('fs').readFile('src/mock/data/recom.json', 'utf-8', (err, data) => {
+          if (err) {
+            throw err
+          } else {
+            res.json(data)
+          }
+        })
+      })
+      app.get('/station', (req, res) => {
+        require('fs').readFile('src/mock/data/station.json', 'utf-8', (err, data) => {
+          if (err) {
+            throw err;
+          } else {
+            res.json(data)
+          }
+        })
+      })
     }
   },
   plugins: [
@@ -85,8 +105,8 @@ module.exports = new Promise((resolve, reject) => {
           messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
         },
         onErrors: config.dev.notifyOnErrors
-        ? utils.createNotifierCallback()
-        : undefined
+          ? utils.createNotifierCallback()
+          : undefined
       }))
 
       resolve(devWebpackConfig)

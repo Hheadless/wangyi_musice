@@ -17,7 +17,7 @@ const mutations = {
     }
 }
 
-// 模块 异步改变
+// 模块 异步改变。异步触发smutations 里的方法
 const actions = {
     changeAsync(context, action) {
         // 第一参数 context 相当于缩小的本模块
