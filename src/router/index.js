@@ -11,6 +11,8 @@ import Video from '@/containers/master/video'
 import Recommend from '@/containers/master/recommend'
 import Station from '@/containers/master/Station'
 
+import StoreView from '@/components/store'
+
 Vue.use(Router)
 
 export default new Router({
@@ -59,6 +61,10 @@ export default new Router({
         name: 'Account',
         component: Account,
       }]
+    },
+    {
+      path: '/sss',
+      component: StoreView
     }
   ]
 })
