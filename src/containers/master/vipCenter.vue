@@ -1,21 +1,21 @@
 <template>
-    <div class="vip-wrap">
-        <header>
-            <img src="../../assets/返回.png" alt="" class="back">
-            <span>会员中心</span>
-            <div class="head-right">
-                <img src="../../assets/我的.png" alt="">
-                <img src="../../assets/噪音.png" alt="">
-            </div>
-        </header>
-        <div class="type-wrap" ref="scrollbox">
-            <div>
-                <li v-for="(v,k) in scroll" :key="k">
-                    <img :src="v" alt="">
-                </li>
-            </div>
-        </div>
+  <div class="vip-wrap">
+    <header>
+      <img src="../../assets/返回.png" alt="" class="back">
+      <span>会员中心</span>
+      <div class="head-right">
+        <img src="../../assets/我的.png" alt="">
+        <img src="../../assets/噪音.png" alt="">
+      </div>
+    </header>
+    <div class="type-wrap" ref="scrollbox">
+      <div>
+        <li v-for="(v,k) in scroll" :key="k">
+          <img :src="v" alt="">
+        </li>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
