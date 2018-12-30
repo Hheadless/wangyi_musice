@@ -62,6 +62,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           }
         })
       })
+      app.get('/vipmusic', (req, res) => {
+        require('fs').readFile('src/mock/data/viptype.json', 'utf-8', (err, data) => {
+          if (err) {
+            throw err;
+          } else {
+            res.json(data)
+          }
+        })
+      })
     }
   },
   plugins: [

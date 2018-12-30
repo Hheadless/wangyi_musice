@@ -9,7 +9,7 @@
         <img src="@/assets/audio.png" alt="">
       </div>
       <div class="link">
-        <router-link v-for="(v,k) in list" :to="v.path" tag="li">
+        <router-link v-for="(v,k) in list" :to="v.path" tag="li" :key="k">
           <span @click="tabChange(k)">{{v.text}}</span>
         </router-link>
         <em :style="style"></em>
@@ -102,5 +102,6 @@ header {
   border-radius: 30%;
   position: absolute;
   bottom: -3px;
+  /* transform: translate() */
 }
 </style>

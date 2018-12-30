@@ -10,8 +10,10 @@ import Friend from '@/containers/master/friend'
 import Video from '@/containers/master/video'
 import Recommend from '@/containers/master/recommend'
 import Station from '@/containers/master/station'
+import VipCenter from '@/containers/master/vipCenter'
 
 import StoreView from '@/components/store'
+import Parents from '@/components/provideandinject/parent'
 
 Vue.use(Router)
 
@@ -59,12 +61,21 @@ export default new Router({
       }, {
         path: '/account',
         name: 'Account',
-        component: Account,
+        component: Account
       }]
+    },
+    {
+      path: "/vipcenter",
+      name: "VipCenter",
+      component: VipCenter
     },
     {
       path: '/sss',
       component: StoreView
+    },
+    {
+      path: '/pare',
+      component: Parents
     }
   ]
 })
